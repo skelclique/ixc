@@ -20,7 +20,7 @@ async function fetchContactSupport() {
     headers: {
       ixcsoft: 'listar',
     },
-    data: {
+    data: JSON.stringify({
       qtype: 'su_oss_chamado.id_assunto',
       query: '73',
       oper: '=',
@@ -28,7 +28,8 @@ async function fetchContactSupport() {
       rp: '200',
       sortname: 'su_oss_chamado.status',
       sortorder: 'asc',
-    },
+      grid_param: '[{"TB": "su_oss_chamado.status", "OP": "=", "P": "A"}]',
+    }),
   })
 
   const contactSupportData = fetchContactSupport.data.registros
