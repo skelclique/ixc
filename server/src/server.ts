@@ -12,11 +12,7 @@ app.register(cors)
 app.register(main)
 app.register(routes)
 
-app
-  .listen({
-    port: 4751,
-    host: '0.0.0.0',
-  })
-  .then(() => {
-    console.log('server running on port 4751...')
-  })
+app.listen({
+  port: Number(process.env.ENV_PORT),
+  host: '0.0.0.0',
+})
