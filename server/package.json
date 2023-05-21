@@ -2,10 +2,10 @@
   "name": "ixc",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "src/server.ts",
   "scripts": {
     "start": "tsx watch src/server.ts",
-    "dev": "tsx src/index.ts"
+    "build": "tsc"
   },
   "author": "",
   "license": "ISC",
@@ -18,13 +18,13 @@
     "google-spreadsheet": "^3.3.0",
     "googleapis": "^118.0.0",
     "ts-node": "^10.9.1",
-    "tsx": "^3.12.7",
-    "typescript": "^5.0.4"
+    "tsx": "^3.12.7"
   },
   "devDependencies": {
     "@rocketseat/eslint-config": "^1.2.0",
     "@types/google-spreadsheet": "^3.3.2",
     "@types/node": "^20.2.1",
-    "eslint": "^8.40.0"
+    "eslint": "^8.40.0",
+    "typescript": "^5.0.4"
   }
 }
